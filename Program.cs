@@ -7,10 +7,10 @@ namespace AdventOfCode
     {
         static void Main(string[] args)
         {
-            IDayPuzzle puzzle = new Day20();
+            IDayPuzzle puzzle = new Day21();
             Stopwatch sw = new Stopwatch();
             sw.Start();
-            string result = puzzle.ExecutePart1();
+            string result = puzzle.ExecutePart2();
             sw.Stop();
 
             Console.WriteLine($"Le résultat du jour ({puzzle.GetType().Name}) est : {result}\n\n");
