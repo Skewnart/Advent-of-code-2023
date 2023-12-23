@@ -7,7 +7,7 @@ namespace AdventOfCode
     {
         static void Main(string[] args)
         {
-            IDayPuzzle puzzle = new Day21();
+            IDayPuzzle puzzle = new Day22();
             Stopwatch sw = new Stopwatch();
             sw.Start();
             string result = puzzle.ExecutePart2();

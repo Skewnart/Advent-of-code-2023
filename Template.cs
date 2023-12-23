@@ -8,6 +8,8 @@ namespace AdventOfCode
 {
     public class Template : IDayPuzzle
     {
+        public static class Extensions { }
+
         public string ExecutePart1()
         {
             var input = G.GetInput();
