@@ -127,12 +127,11 @@ namespace AdventOfCode.Puzzle
                 sums.Add(sum);
             }
 
-            long a0 = sums[0];
-            long a1 = sums[1] - a0;
-            long a2 = sums[2] - a1;
-            //Ma quadra est un peu pété, j'ai fini par aller chercher un calcul de polynome en ligne avec les 3 résultats que j'ai trouvé en fonction de x pour me donner A B et C
-            // Ce qui me donne : 3738 + 14836 * 202300 + 14696 * 202300^2 = 601441063166538
-            return (a0 + a1 * reachableboards + (reachableboards * (reachableboards - 1) / 2) * (a2 - a1)).ToString(); // C'est ça qu'est pété du coup
+            long m = sums[1] - sums[0];
+            long a = (sums[2] - sums[1] - m) / 2;
+            long b = m - a;
+            long c = sums[0];
+            return (a * reachableboards * reachableboards + b * reachableboards + c).ToString();
         }
 
         public static class G
